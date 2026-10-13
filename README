@@ -1,0 +1,46 @@
+Bài thực hành mạng máy tính và giao tiếp trực tuyến cung cấp hệ thống kiến thức toàn diện từ lý thuyết nền tảng đến 
+kỹ năng thực hành cấu hình, mô phỏng mạng và ứng dụng công cụ làm việc nhóm. Trong phần lý thuyết được trình bày ở tệp 
+`Buoi01 NHÓM.docx`, sinh viên tiến hành kiểm tra và ghi nhận các thông số địa chỉ IP thực tế của máy tính đang sử dụng bao
+gồm IP address, Subnet mask, Default Gateway và DNS server vào Bảng 1. Đồng thời, báo cáo đi sâu làm rõ chức năng của các 
+thành phần hạ tầng mạng trong Bảng 2 như Gateway (cổng kết nối giữa các mạng khác nhau), DNS Server (dịch vụ phân giải tên 
+miền thành địa chỉ IP) và DHCP (giao thức cấp phát địa chỉ IP động). Bên cạnh đó, sinh viên nghiên cứu về địa chỉ IPv6 
+tại Bảng 3 bao gồm các loại địa chỉ và cách thức biểu diễn địa chỉ IPv6, cũng như phân tích chức năng cùng ứng dụng thực tế 
+của thiết bị Router (định tuyến gói tin giữa các mạng) và Switch (chuyển mạch trong mạng nội bộ) tại Bảng 4. Để hoàn tất phần 
+này, lệnh `tracert` trên hệ điều hành Windows được sử dụng trong Bảng 5 để theo dõi và ghi nhận chi tiết các nút
+trung gian trên đường truyền từ máy tính cục bộ tới các máy chủ phổ biến như `[www.gmail.com](https://www.gmail.com)`, 
+`[www.facebook.com](https://www.facebook.com)`, `www.ctu.edu.vn` và `[www.twitter.com](https://www.twitter.com)`.
+Tiếp theo, ở phần thực hành mô phỏng trên phần mềm Cisco Packet Tracer, sinh viên bắt đầu với bài tập thiết kế sơ đồ mạng LAN 
+đơn giản bao gồm 1 PC Client, 1 thiết bị Switch 2960-24TT và 1 Web Server. Quá trình này giúp sinh viên làm quen với không gian
+làm việc Logical, các danh mục thiết bị như End Devices (chứa PC, Server) và Network Devices (chứa Switch), cùng các thẻ giao 
+diện cấu hình của thiết bị như Physical (quản lý phần cứng, bật/tắt nguồn khi thêm/thay thế module), Config (cấu hình chung và 
+Display Name), Desktop (chứa các công cụ phần mềm như IP Configuration, Command Prompt, Web Browser), Programming và Attributes. 
+Sau khi thiết lập kết nối bằng cáp (hoặc chọn cáp tự động), sinh viên tiến hành cài đặt IP tĩnh (Static) cho máy Client với
+địa chỉ IPv4 `192.168.1.10` (Subnet Mask `255.255.255.0`) và Web Server với tên hiển thị `Web Server` cùng địa chỉ 
+IPv4 `192.168.1.2` (Subnet Mask `255.255.255.0`). Việc kiểm tra kết nối được thực hiện qua hai công cụ: sử dụng lệnh 
+`ping 192.168.1.2` trong Command Prompt để xác nhận tỷ lệ truyền nhận gói tin thành công ($0\%$ mất gói) và mở Web Browser 
+nhập URL `[http://192.168.1.2](http://192.168.1.2)` để kiểm tra khả năng phản hồi trang web chào mừng của Cisco Packet Tracer.
+Cuối cùng, sinh viên chuyển sang chế độ Simulation, lựa chọn bộ lọc Edit Filters cho giao thức ICMP, tạo gói tin Add Simple 
+PDU kết nối từ Client đến Web Server và nhấn Play Controls để quan sát trực quan luồng di chuyển của gói tin, 
+sau đó lưu kết quả thành tệp `Buoi3_Họ_tên_Bài_2.pkt`.
+Ở mức độ phức tạp hơn, bài thực hành mở rộng sang sơ đồ mạng định tuyến đa phân mạng kết nối thông qua Router ISR4331. 
+Sơ đồ này bao gồm phân mạng Room 1 (`172.16.1.0/24` gồm Switch 1 và các máy PC1, PC2, PC3), phân mạng Room 2
+(`192.168.1.0/24` gồm Switch 2 và các máy PC4, PC5, PC6) và phân mạng Server (`192.168.5.0/24` gồm Switch 3 và Web Server). 
+Sinh viên tiến hành cấu hình định tuyến, sử dụng các lệnh `ping` và `tracert` để kiểm tra khả năng thông suốt giữa các 
+máy tính ở các phòng khác nhau tới Web Server, đồng thời dùng chế độ Simulation để mô phỏng diễn tiến của các giao thức ICMP 
+và DNS khi truyền gói tin, trước khi lưu bài tập nhóm dưới tên `Bai02_NHÓM.pkt`. Ngoài ra, phần bài tập làm thêm yêu 
+cầu xây dựng mô hình mạng hỗn hợp kết hợp giữa mạng có dây và không dây bằng cách bổ sung điểm truy cập không dây
+Wireless Access Point (WRT300N) trang bị mật khẩu bảo mật, cho phép các thiết bị không dây như Laptop, Smartphone, 
+TabletPC và Wireless Printer truy cập vào hệ thống. Trong bài tập này, Web Server được thiết lập tên miền là 
+`Webserver.Lab03.net`, sinh viên kiểm tra kết nối liên mạng và mô phỏng giao thức ICMP/DNS rồi lưu tệp cá nhân dưới tên 
+`Buoi4_Họ_tên_Bài_lam_them.pkt`.
+Phần cuối cùng của bài thực hành tập trung vào việc rèn luyện các kỹ năng giao tiếp trực tuyến cơ bản được ghi nhận trong 
+tệp `Bai3_NHÓM- Giao tiếp trực tuyến cơ bản.docx`. Trong ứng dụng Gmail, sinh viên thực hành tạo nhóm liên hệ, thử gửi
+email nhóm, thiết lập bộ lọc tự động tìm kiếm các email gửi từ địa chỉ `lthtran@ctu.edu.vn`, tạo nhãn quản lý theo tên
+lớp (như `CNTTA1_K51`) và nhập danh sách liên hệ lớp từ tập tin dữ liệu `Danhsach K51.csv`. Về mạng xã hội và nhắn tin, 
+sinh viên khởi tạo một Fanpage Facebook đại diện cho lớp, thực hiện gán quyền quản trị viên cho bạn học cùng lớp, 
+đồng thời tạo nhóm Zalo chung và thiết lập phân quyền chỉ cho phép Ban cán sự lớp gửi tin nhắn. Đối với công cụ hội nghị 
+trực tuyến (Google Meet hoặc Zoom), sinh viên thực hành tổ chức cuộc họp trực tuyến bao gồm các thao tác khởi tạo, 
+mời thành viên, phê duyệt hoặc từ chối người tham gia và chia sẻ màn hình để trình chiếu tập tin PowerPoint, 
+phục vụ cho việc kiểm tra demo trực tiếp của giáo viên hướng dẫn. Toàn bộ kết quả thực hành của nhóm được hoàn thiện 
+và nộp lại đầy đủ dưới dạng bộ 4 tập tin quy định: `Buoi01 NHÓM.docx`, `Bai02_NHÓM.pkt`, `Bai3_NHÓM- Giao tiếp trực tuyến 
+cơ bản.docx` và `Danhsach K51.csv`.
